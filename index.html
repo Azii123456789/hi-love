@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Surprise For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Background Music (Optional, user can play) -->
+    <audio id="bg-music" src="music.mp3" loop></audio>
+    <!-- <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mp3">
+    </audio> -->
+
+    <div class="container">
+
+        <!-- STEP 1: The Envelope -->
+        <div id="envelope-section" class="screen active">
+            <div class="envelope-wrapper" onclick="openEnvelope()">
+                <div class="envelope">
+                    <div class="front"></div>
+                    <div class="card">
+                        <div class="text">Click Me! <div class="heart">❤️</div>
+                        </div>
+                    </div>
+                    <div class="hearts">
+                        <div class="one"></div>
+                        <div class="two"></div>
+                        <div class="three"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="hint">Tap the envelope to open!</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

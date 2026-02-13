@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Surprise For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Background Music (Optional, user can play) -->
+    <!-- <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mp3">
+    </audio> -->
+
+    <div class="container">
+
+        <!-- STEP 2: The Question (Active by default on this page) -->
+        <div id="question-section" class="screen active">
+            <h1>Will you be my Valentine? 🌹</h1>
+
+            <div class="buttons">
+                <button id="yes-btn" onclick="acceptValentine()">YES! 🥰</button>
+                <button id="no-btn" onmouseover="moveButton()" onclick="moveButton()">No 😢</button>
+            </div>
+        </div>
+
+        <!-- STEP 3: Success -->
+        <div id="success-section" class="screen hidden">
+            <!-- Background Video -->
+            <video id="bg-video" autoplay loop muted playsinline class="cinematic-video">
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+
+            <!-- Lighting Effects Overlay -->
+            <div class="lighting-overlay"></div>
+
+            <!-- Decorative Video Frame -->
+            <div class="video-frame"></div>
+
+            <!-- Romantic Atmosphere Layer -->
+            <div class="romantic-atmosphere">
+                <div class="couple-silhouette"></div>
+                <div class="ambient-light l1"></div>
+                <div class="ambient-light l2"></div>
+                <div class="ambient-light l3"></div>
+                <div class="floating-heart p1">♥</div>
+                <div class="floating-heart p2">♥</div>
+                <div class="floating-heart p3">♥</div>
+
+                <!-- Floating Petals -->
+                <div class="floating-petal fp1">🌸</div>
+                <div class="floating-petal fp2">🌸</div>
+                <div class="floating-petal fp3">🌸</div>
+                <div class="floating-petal fp4">🌸</div>
+            </div>
+
+            <div class="content-overlay">
+                <h1>YAY!❤️</h1>
+
+                <div class="main-layout">
+                    <!-- Featured Romantic Frame (Container for Slideshow) -->
+                    <div class="romantic-frame-wrapper">
+                        <div class="romantic-frame">
+                            <!-- Slideshow moved INSIDE the frame -->
+                            <div class="slide fade">
+                                <img src="valentine1.jpg" alt="Us 1" class="romantic-photo">
+                            </div>
+                            <div class="slide fade">
+                                <img src="valentine2.jpg" alt="Us 2" class="romantic-photo">
+                            </div>
+                            <div class="slide fade">
+                                <img src="valentine3.jpg" alt="Us 3" class="romantic-photo">
+                            </div>
+                            <div class="slide fade">
+                                <img src="valentine4.jpg" alt="Us 4" class="romantic-photo">
+                            </div>
+                            <div class="slide fade">
+                                <img src="valentine5.jpg" alt="Us 5" class="romantic-photo">
+                            </div>
+                            <div class="slide fade">
+                                <img src="valentine6.jpg" alt="Us 6" class="romantic-photo">
+                            </div>
+                            <div class="slide fade">
+                                <img src="valentine7.jpg" alt="Us 7" class="romantic-photo">
+                            </div>
+                        </div>
+                        <!-- Floating Sparkles/Particles -->
+                        <div class="sparkle s1"></div>
+                        <div class="sparkle s2"></div>
+                        <div class="sparkle s3"></div>
+                        <div class="sparkle s4"></div>
+                        <div class="sparkle s5"></div>
+                    </div>
+                    <!-- Old Slideshow Container Removed -->
+                </div>
+
+                <!-- Long Love Message -->
+                <!-- New Valentine's Card Layout -->
+                <div class="valentine-card">
+                    <h2 class="card-title">Happy Valentine's Day</h2>
+
+                    <div class="card-content">
+                        <h3>My Dearest Valentine, 💌</h3>
+                        <p>
+                            From the moment you walked into my life, everything changed for the better.
+                            You are my happiness, my safe place, and my greatest adventure.
+                            Every day with you feels like a gift I don't deserve but will cherish forever.
+                            <br><br>
+                            Thank you for being you, and for choosing to spend time with me.
+                            I can't wait to make more beautiful memories together.
+                            <br><br>
+                            As I continue getting to know you more, I want you to know that I am sincerely courting you.
+                            My intentions are genuine, and I am willing to take things step by step, showing you how
+                            serious and special you are to me. I hope to earn your heart not just through words, but
+                            through my actions, care, and consistency.
+                        </p>
+                        <p class="signature">Forever yours,<br>❤️</p>
+                    </div>
+
+                    <!-- CSS Decorations - Tulips -->
+                    <div class="decoration tulip t1">🌷</div>
+                    <div class="decoration tulip t2">🌷</div>
+                    <div class="decoration tulip t3">🌷</div>
+                    <div class="decoration tulip t4">🌷</div>
+                    <!-- Keep hearts/balloons if desired, or replace? User asked for tulips specifically -->
+                    <div class="decoration heart-dec h1">❤️</div>
+                </div>
+
+                <p class="footer-note">😘</p>
+
+                <!-- Subtitles -->
+                <div id="subtitle-container" class="cinematic-subtitles"></div>
+
+                <!-- Media Controls -->
+                <button id="media-control" onclick="toggleMedia()" class="media-btn">⏯️ Play/Pause</button>
+            </div>
+
+            <!-- Audio Players -->
+            <!-- Using video2.mp4 for voice audio -->
+            <audio id="voice-audio" src="video2.mp4"></audio>
+
+            <!-- Background Music (Persistent) -->
+            <audio id="bg-music" src="music.mp3" loop></audio>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
